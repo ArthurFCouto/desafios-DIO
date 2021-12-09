@@ -1,2 +1,2 @@
-# desafios-DIO
-Repositório que será utilizado para desafios da DIO
+# Desafios-Digital_Inovation_One
+Repositório que será utilizado para desafios da DIO.
