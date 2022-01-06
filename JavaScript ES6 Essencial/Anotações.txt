@@ -1,0 +1,19 @@
+JS foi lançado em 1995.
+Criado por Brendan Eich.
+ECMAScript
+Especificação da linguagem de programação, padronização ECMA 262, ECMA International.
+TC39 comite que gerencia.
+Stage 0 - Submisão da proposta; (strawman)
+Stage 1 - Proposta formal da funcionalidade (definição do campeão); (proposal)
+Stage 2 - Primeira versão da proposta na especificação; (draft)
+Stage 3 - Proposta praticamente pronta, especificação deve estar completa; (candidate)
+Stage 4 - Duas implementações em conformidade que passe no teste, ainda pode ser modificada. (finished)
+ES2018 - Operadores rest/spread; Iteração assíncrona. Promise.prototype.finally().
+ES.Next Especificações que possuem implementações futuras.
+Babel é transpilador, transforma a implementação de uma funcionalidade nova em uma aceita em mais browsers.
+JS é uma linguagem interpretada, tipagem fraca e dinâmica.
+Tipagem dinâmica: Não é preciso informar o tipo de variável na sua criação. (inferência de tipo)
+TypeScript - Superset (Adiciona funcionalidades que o JS não possui por padrão)
+Flow - Semelhante ao TypeScript.
+Linter - Validador de código.
+Closure: Escopo Global, de Função e de Escopo.
