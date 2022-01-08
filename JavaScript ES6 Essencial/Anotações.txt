@@ -16,4 +16,61 @@ Tipagem dinâmica: Não é preciso informar o tipo de variável na sua criação
 TypeScript - Superset (Adiciona funcionalidades que o JS não possui por padrão)
 Flow - Semelhante ao TypeScript.
 Linter - Validador de código.
-Closure: Escopo Global, de Função e de Escopo.
+Closure: Escopo Global, de Função e de Bloco. Capacidade da função "lembrar" do seu contexto de criação.
+Currying: Para cada parâmetro da função, será criada uma nova função.
+Hoisting: De variáveis e funções. Não retorna error se utilizar a variável ou função antes de sua declaração, retornará undefined no caso de variável e retornará o resultado da função caso seja de função.
+Imutabilidade: Em linguagens funcionais, os tipos de dados nunca mudam após declarados. O spreed operator é um ponteiro que aponta para a variável original. Geralmente arrays e objetos não são alterados.
+Let e Const respeitam escopo de bloco.
+Const do tipo primitivo não podem ser alteradas, objetos e arrays podem.
+Tipos primitivos: String, number, boolean, null, undefined, symbol
+Outros tipos: Objetct, Function, Array
+Funções para String:
+função slice(inicio, fim); //Quando passado -1 retorna o último item, quando passado apenas 1 parametro retorna os itens a partir da posição informada, quando o numero for negativo, retorna a quantidade de itens de trás pra frente. //Não altera o array original
+função splice(inicio, qtd de caracteres); //Não é imutável, altera o array original. splice(posição, item a remover, itens a adicionar);
+Funções para number:
+toFixed(0); //Quantidade de casas decimais
+É possível acessar uma propriedade de objeto como array: user['name'] = "Arthur"; //Acessando propriedade name
+É possível também deletar uma propriedade: delete user.name; //Excluindo a propriedade name
+Funções para Object:
+keys(user); //Retorna as propriedade/chaves do objeto em um array.
+values(user); //Retorna os valores das propriedades do objeto.
+entries(user); //Retorna um array de arrays, onde cada array terá dois elementos a propriedade e o valor.
+assign({}, user, {properties: 'value'}); //Cria um novo objeto mesclando com as propriedades do objeto passado como parametro
+freeze(object); //Torna o objeto imutável, não pode criar, deletar ou editar propriedades.
+seal(object); //Apenas não permite criar ou excluir, mas permite alterar propriedades.
+Symbols são unicos, como ENUMs. Habilita umas propriedade que não pode ser sobreescrita. #Estudar mais sobre.
+arrow function ()=> ();
+Funções em arrays:
+isArray(user); //Verifica se é um array
+Não alteram o array original.
+Operadores: Aritméticos, Atribuição, Comparação, Condicional, Lógicos e Spread Operator.
+O mais "+" antes de uma string converte uma string em um number.
+Comparar igualdade com dois ==, se compara apenas os valores.
+String preenchida retorna verdadeiro.
+O operador in verifica se algo está em alguma outra coisa:
+var arvores = [ 'pau-brasil', 'ype' ];
+0 in arvores: //Retorna true ou false.
+Em estruturas de repetição, o continue pula a próxima repetição enquanto o break encerra a repetição.
+Array.of(1, 2, 3) ou Array(1, 2, 3); //Cria um array com os parâmetros passados
+Array(3); //Quando passado apenas um parametro inteiro, cria um array com a quantidade de posições vazias informadas.
+## Estudar mais sobre ->
+prototype: Cria as referências para nosso objeto. __proto__ aponta para o prototype que é criado a partir de um constructor. Toda função constructor tem um prototype.
+instanceof verifica em qual instacial foi criado o objeto.
+
+JS não tem modificadores de acesso.
+Encapsulamento - Object.defineProperty altera os modificadores de acesso de uma variável.
+
+Stact permite chamar o objeto sem instanciar.
+<- ##
+
+Design patterns - Padrões de projetos. Definições de mais alto nível de como um problema pode ser solucionado.
+Surgiu pela pattern language em 1978. São de tres tipos:
+Criação: Abstraem ou adiam a criação dos objetos. Ajudam a tornar o sistema independente.
+Estruturais: Preocupam com a estrutura de objetos maiores.
+Comportamentais: Se concentram nos algoritmos e atribuições de responsabilidade entre os objetos.
+Patterns mais utilizados em JS: Factory, Singleton, Decorator, Observer e Module.
+Se chamar uma função construtora com um new ela não é um Factory.
+jQuery é o padrão mais popular de Singleton. Significa que uma vez instanciado o objeto, sempre que for reutilizado irá retornar a primeira instancia.
+Decorator recebe uma função como parâmetros. **
+No Observer, sempre que houver uma alteração no objeto irá haver um retorno, ou notificação. Ele fica acompanhando as alterações. **
+Module é poder importar e exportar objetos.
