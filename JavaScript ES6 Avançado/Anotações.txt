@@ -1,0 +1,9 @@
+Tradicionalmente a função tem a seguinte estrutura: function name(parametros) { ... };
+Para declarar funções anonimas é preciso atribuí-la a uma variável, ou passar como parâmetro.
+Arrow functions => São funções anonimas com algumas vantagens. Operações em uma linha pode-se omitir o return. Se existir apenas um parâmetro pode-se emitir os parentes e => console.log(e); Para retornar objetos literais com return implicito, usa-se a sintaxe: ()=> ({ test: 123 }); Hoisting não funciona com arrow functions.
+As funções possuem um contexto de invocação. Executadas no contexto de onde não invocadas. O this aponta para este contexto.
+Funções de time, callback, eventListener geralmente são executadas no contexto global.
+Antes do ES6 para definir o contexto era preciso utilizar o método .bind(this) ou setar o contexto em uma variável para utilizar var _that =  this.
+O arrow function tem contexto igual ao "pai", ao escopo que o envolve (nesse caso não se pode usar o bind).
+Default Function Arguments = Utilizando o caractere '=' em um parâmetro da função, atribuimos um valor padrão para este argumento. Funciona com todos os parâmetros. Pode-se referenciar aos próprios parâmetros (se atentar a ordem de declaração).
+Enahnce Object Literals = Ao criar um objeto e um dos atributos for igual a uma função ou variável com nome igual ao atributo, pode-se escrever a palavra apenas uma vez. Atributos dos objetos podem receber funções.
