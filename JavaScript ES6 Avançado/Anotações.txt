@@ -7,3 +7,22 @@ Antes do ES6 para definir o contexto era preciso utilizar o método .bind(this) 
 O arrow function tem contexto igual ao "pai", ao escopo que o envolve (nesse caso não se pode usar o bind).
 Default Function Arguments = Utilizando o caractere '=' em um parâmetro da função, atribuimos um valor padrão para este argumento. Funciona com todos os parâmetros. Pode-se referenciar aos próprios parâmetros (se atentar a ordem de declaração).
 Enahnce Object Literals = Ao criar um objeto e um dos atributos for igual a uma função ou variável com nome igual ao atributo, pode-se escrever a palavra apenas uma vez. Atributos dos objetos podem receber funções.
+Rest Operator - Semelhante ao spreed operator, é utilizado quando não se sabe quantos parametros serão passados na função: function fn (...arg) {...}; neste caso, a variável arg terá um _protoType de Array.
+O arguments é uma palavra reservada para acessar os parâmetros passados na função. Não funciona no arrow function e tem _protoType Object.
+Spreed operator funciona em strings, arrays, literal objects e objetos iteraveis. Ao utilizar você consegue "quebrar" e transformar em um array. E pode construir também um array. Muito utilizado para fazer clones de objetos.
+Destructuring Assignment - "Desconstruir o array e atraibuir suas posições a variáveis. var [pos1, pos2, pos3] = ['index1', 'index2', 'index3']. Não altera o objeto diretamente.
+Symbols são maneiras de gerar identificadores únicos: const uniqueId = Simbol();
+É uma forma de fazer propriedades privadas*.
+Iteradores: Interface para consumir passo a passo uma estrutura de dados.
+#Estudar mais sobre Iteradores, Symbols (Well know symbols) e Generators.
+Generator se comunica através da mesma interface de iteração:
+function* fun () { ... yield; ... }; Adicionando o asterisco e a palavra reservada yield, podemos pausar a execução da função em um determinado ponto e aguardar o comando .next() para seguir.
+Ferramenta poderosa para controlar o fluxo das funções. É possível utilizar como uma forma de construir iteradores.
+Para criar uma promise basta instanciar uma função new Promise e passar uma função com os argumentos resolve e reject.
+const promisss = ()=> new Promise((resolve, reject) => { ... resolve(...); }; Caso de algum erro ela automáticamente retorna o reject.
+Para executar basta adicionar o then:
+promiss.then(obj => console.log(obj)); Onde obj é o retorno da promise.
+Para tratar erros, ao invés do then se utilizar o catch();
+É possível encadear promises.
+è possível também utilizar promises em paralelo, já que naturalmente elas elas são sequenciais: Promise.all([promise1(), promise2()]).then(data=> console.log(data));
+Se ao invés de all utilizarmos race, será retornado a promise que resolver primeiro.
